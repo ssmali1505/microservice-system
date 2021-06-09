@@ -1,0 +1,19 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: APIGATEWAY-SERVICE
+    
+zuul:
+  routes:
+    products:
+      path: /v1/products/**
+      url: http://localhost:9001/      
+    stores:
+      path: /v1/stores/**
+      url: http://localhost:9002/
+  host:    connect-timeout-millis: 2000
+    socket-timeout-millis: 5000  
+
+ 

@@ -1,0 +1,86 @@
+Request, http://localhost:9000/v1/stores/stores/1,GET,null 
+Response, {"id":1,"name":"string","desc":"string"} 
+Request, http://localhost:9000/v1/stores/stores/1,GET,N/A 
+Response, {"id":1,"name":"string","desc":"string"} 
+Request, http://localhost:9000/v1/products/,GET,N/A 
+Response, {"timestamp":"2021-04-23T10:54:23.326+00:00","status":404,"error":"Not Found","message":"","path":"/"} 
+Request, http://localhost:9000/v1/products/csrf,GET,N/A 
+Response, {"timestamp":"2021-04-23T10:54:23.437+00:00","status":404,"error":"Not Found","message":"","path":"/csrf"} 
+Request, http://localhost:9000/v1/products/v2/api-docs,GET,N/A 
+Response, {"swagger":"2.0","info":{"description":"PRODUCT-SERVICE API reference for developers","version":"1.0","title":"PRODUCT-SERVICE","termsOfService":"http://abcd.com","contact":{"name":"user@gmail.com"},"license":{"name":"PRODUCT-SERVICE License","url":"user@gmail.com"}},"host":"localhost:9000","basePath":"/v1/products","tags":[{"name":"product-controller","description":"Product Controller"}],"paths":{"/products/":{"post":{"tags":["product-controller"],"summary":"CreateProduct","operationId":"CreateProductUsingPOST","consumes":["application/json"],"produces":["*/*"],"parameters":[{"in":"body","name":"product","description":"product","required":true,"schema":{"$ref":"#/definitions/Product"}}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/Product"}},"201":{"description":"Created"},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"},"404":{"description":"Not Found"}},"deprecated":false}},"/products/{id}":{"get":{"tags":["product-controller"],"summary":"getProductById","operationId":"getProductByIdUsingGET","produces":["*/*"],"parameters":[{"name":"id","in":"path","description":"id","required":true,"type":"integer","format":"int64"}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/ResponseTemplateVO"}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"},"404":{"description":"Not Found"}},"deprecated":false}}},"definitions":{"Product":{"type":"object","properties":{"desc":{"type":"string"},"id":{"type":"integer","format":"int64"},"name":{"type":"string"},"price":{"type":"number","format":"float"},"storeId":{"type":"integer","format":"int64"}},"title":"Product"},"ResponseTemplateVO":{"type":"object","properties":{"product":{"$ref":"#/definitions/Product"},"store":{"$ref":"#/definitions/Store"}},"title":"ResponseTemplateVO"},"Store":{"type":"object","properties":{"desc":{"type":"string"},"id":{"type":"integer","format":"int64"},"name":{"type":"string"}},"title":"Store"}}} 
+Request, http://localhost:9000/v1/stores/,GET,N/A 
+Response, {"timestamp":"2021-04-23T10:54:38.483+00:00","status":404,"error":"Not Found","message":"","path":"/"} 
+Request, http://localhost:9000/v1/stores/csrf,GET,N/A 
+Response, {"timestamp":"2021-04-23T10:54:38.593+00:00","status":404,"error":"Not Found","message":"","path":"/csrf"} 
+Request, http://localhost:9000/v1/stores/v2/api-docs,GET,N/A 
+Response, {"swagger":"2.0","info":{"description":"STORE-SERVICE API reference for developers","version":"1.0","title":"STORE-SERVICE","termsOfService":"http://abcd.com","contact":{"name":"user@gmail.com"},"license":{"name":"STORE-SERVICE License","url":"user@gmail.com"}},"host":"localhost:9000","basePath":"/v1/stores","tags":[{"name":"store-controller","description":"Store Controller"}],"paths":{"/stores/":{"post":{"tags":["store-controller"],"summary":"CreateStore","operationId":"CreateStoreUsingPOST","consumes":["application/json"],"produces":["*/*"],"parameters":[{"in":"body","name":"store","description":"store","required":true,"schema":{"$ref":"#/definitions/Store"}}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/Store"}},"201":{"description":"Created"},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"},"404":{"description":"Not Found"}},"deprecated":false}},"/stores/{id}":{"get":{"tags":["store-controller"],"summary":"getStoreById","operationId":"getStoreByIdUsingGET","produces":["*/*"],"parameters":[{"name":"id","in":"path","description":"id","required":true,"type":"integer","format":"int64"}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/Optional«Store»"}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"},"404":{"description":"Not Found"}},"deprecated":false}}},"definitions":{"Optional«Store»":{"type":"object","properties":{"empty":{"type":"boolean"},"present":{"type":"boolean"}},"title":"Optional«Store»"},"Store":{"type":"object","properties":{"desc":{"type":"string"},"id":{"type":"integer","format":"int64"},"name":{"type":"string"}},"title":"Store"}}} 
+Request, http://localhost:9000/v1/products/,GET,N/A 
+Response, {"timestamp":"2021-05-07T03:33:24.089+00:00","status":404,"error":"Not Found","message":"","path":"/"} 
+Request, http://localhost:9000/v1/products/csrf,GET,N/A 
+Response, {"timestamp":"2021-05-07T03:33:24.266+00:00","status":404,"error":"Not Found","message":"","path":"/csrf"} 
+Request, http://localhost:9000/v1/products/v2/api-docs,GET,N/A 
+Response, {"swagger":"2.0","info":{"description":"PRODUCT-SERVICE API reference for developers","version":"1.0","title":"PRODUCT-SERVICE","termsOfService":"http://abcd.com","contact":{"name":"user@gmail.com"},"license":{"name":"PRODUCT-SERVICE License","url":"user@gmail.com"}},"host":"localhost:9000","basePath":"/v1/products","tags":[{"name":"product-controller","description":"Product Controller"}],"paths":{"/products/":{"post":{"tags":["product-controller"],"summary":"CreateProduct","operationId":"CreateProductUsingPOST","consumes":["application/json"],"produces":["*/*"],"parameters":[{"in":"body","name":"product","description":"product","required":true,"schema":{"$ref":"#/definitions/Product"}}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/Product"}},"201":{"description":"Created"},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"},"404":{"description":"Not Found"}},"deprecated":false}},"/products/{id}":{"get":{"tags":["product-controller"],"summary":"getProductById","operationId":"getProductByIdUsingGET","produces":["*/*"],"parameters":[{"name":"id","in":"path","description":"id","required":true,"type":"integer","format":"int64"}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/ResponseTemplateVO"}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"},"404":{"description":"Not Found"}},"deprecated":false}}},"definitions":{"Product":{"type":"object","properties":{"desc":{"type":"string"},"id":{"type":"integer","format":"int64"},"name":{"type":"string"},"price":{"type":"number","format":"float"},"storeId":{"type":"integer","format":"int64"}},"title":"Product"},"ResponseTemplateVO":{"type":"object","properties":{"product":{"$ref":"#/definitions/Product"},"store":{"$ref":"#/definitions/Store"}},"title":"ResponseTemplateVO"},"Store":{"type":"object","properties":{"desc":{"type":"string"},"id":{"type":"integer","format":"int64"},"name":{"type":"string"}},"title":"Store"}}} 
+Request, http://localhost:9000/v1/stores/,GET,N/A 
+Response, {"timestamp":"2021-05-07T03:37:30.506+00:00","status":404,"error":"Not Found","message":"","path":"/"} 
+Request, http://localhost:9000/v1/stores/csrf,GET,N/A 
+Response, {"timestamp":"2021-05-07T03:37:30.603+00:00","status":404,"error":"Not Found","message":"","path":"/csrf"} 
+Request, http://localhost:9000/v1/stores/v2/api-docs,GET,N/A 
+Response, {"swagger":"2.0","info":{"description":"STORE-SERVICE API reference for developers","version":"1.0","title":"STORE-SERVICE","termsOfService":"http://abcd.com","contact":{"name":"user@gmail.com"},"license":{"name":"STORE-SERVICE License","url":"user@gmail.com"}},"host":"localhost:9000","basePath":"/v1/stores","tags":[{"name":"store-controller","description":"Store Controller"}],"paths":{"/stores/":{"post":{"tags":["store-controller"],"summary":"CreateStore","operationId":"CreateStoreUsingPOST","consumes":["application/json"],"produces":["*/*"],"parameters":[{"in":"body","name":"store","description":"store","required":true,"schema":{"$ref":"#/definitions/Store"}}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/Store"}},"201":{"description":"Created"},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"},"404":{"description":"Not Found"}},"deprecated":false}},"/stores/{id}":{"get":{"tags":["store-controller"],"summary":"getStoreById","operationId":"getStoreByIdUsingGET","produces":["*/*"],"parameters":[{"name":"id","in":"path","description":"id","required":true,"type":"integer","format":"int64"}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/Optional«Store»"}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"},"404":{"description":"Not Found"}},"deprecated":false}}},"definitions":{"Optional«Store»":{"type":"object","properties":{"empty":{"type":"boolean"},"present":{"type":"boolean"}},"title":"Optional«Store»"},"Store":{"type":"object","properties":{"desc":{"type":"string"},"id":{"type":"integer","format":"int64"},"name":{"type":"string"}},"title":"Store"}}} 
+Request, http://localhost:9000/v1/stores/stores/,POST,{
+  "desc": "this is example store",
+  "name": "medical store"
+} 
+Response, {"id":1,"name":"medical store","desc":"this is example store"} 
+Request, http://localhost:9000/v1/products/products/,POST,{
+  "desc": "product 1",
+  "name": "product 1",
+  "price": 1000,
+  "storeId": 1
+} 
+Response, {"id":1,"name":"product 1","desc":"product 1","price":1000.0,"storeId":1} 
+Request, http://localhost:9000/v1/products/products/1,GET,N/A 
+Response, {"product":{"id":1,"name":"product 1","desc":"product 1","price":1000.0,"storeId":1},"store":{"id":1,"name":"medical store","desc":"this is example store"}} 
+Request, http://localhost:9000/v1/products/products/1,GET,N/A 
+Response, {"timestamp":"2021-05-11T07:27:36.557+00:00","status":500,"error":"Internal Server Error","message":"","path":"/products/1"} 
+Request, http://localhost:9000/v1/stores/stores/,POST,{
+  "desc": "this is example store",
+  "name": "store 1"
+} 
+Response, {"id":1,"name":"store 1","desc":"this is example store"} 
+Request, http://localhost:9000/v1/products/products/,POST,{
+  "desc": "product 1",
+  "name": "product 1",
+  "price": 1000,
+  "storeId": 1
+} 
+Response, {"id":1,"name":"product 1","desc":"product 1","price":1000.0,"storeId":1} 
+Request, http://localhost:9000/v1/products/products/1,GET,N/A 
+Response, {"product":{"id":1,"name":"product 1","desc":"product 1","price":1000.0,"storeId":1},"store":{"id":1,"name":"store 1","desc":"this is example store"}} 
+Request, http://localhost:9000/v1/products/,GET,N/A 
+Response, {"timestamp":"2021-05-11T09:46:22.139+00:00","status":404,"error":"Not Found","message":"","path":"/"} 
+Request, http://localhost:9000/v1/products/csrf,GET,N/A 
+Response, {"timestamp":"2021-05-11T09:46:22.276+00:00","status":404,"error":"Not Found","message":"","path":"/csrf"} 
+Request, http://localhost:9000/v1/products/v2/api-docs,GET,N/A 
+Response, {"swagger":"2.0","info":{"description":"PRODUCT-SERVICE API reference for developers","version":"1.0","title":"PRODUCT-SERVICE","termsOfService":"http://abcd.com","contact":{"name":"user@gmail.com"},"license":{"name":"PRODUCT-SERVICE License","url":"user@gmail.com"}},"host":"localhost:9000","basePath":"/v1/products","tags":[{"name":"product-controller","description":"Product Controller"}],"paths":{"/products/":{"post":{"tags":["product-controller"],"summary":"CreateProduct","operationId":"CreateProductUsingPOST","consumes":["application/json"],"produces":["*/*"],"parameters":[{"in":"body","name":"product","description":"product","required":true,"schema":{"$ref":"#/definitions/Product"}}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/Product"}},"201":{"description":"Created"},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"},"404":{"description":"Not Found"}},"deprecated":false}},"/products/{id}":{"get":{"tags":["product-controller"],"summary":"getProductById","operationId":"getProductByIdUsingGET","produces":["*/*"],"parameters":[{"name":"id","in":"path","description":"id","required":true,"type":"integer","format":"int64"}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/ResponseTemplateVO"}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"},"404":{"description":"Not Found"}},"deprecated":false}}},"definitions":{"Product":{"type":"object","properties":{"desc":{"type":"string"},"id":{"type":"integer","format":"int64"},"name":{"type":"string"},"price":{"type":"number","format":"float"},"storeId":{"type":"integer","format":"int64"}},"title":"Product"},"ResponseTemplateVO":{"type":"object","properties":{"product":{"$ref":"#/definitions/Product"},"store":{"$ref":"#/definitions/Store"}},"title":"ResponseTemplateVO"},"Store":{"type":"object","properties":{"desc":{"type":"string"},"id":{"type":"integer","format":"int64"},"name":{"type":"string"}},"title":"Store"}}} 
+Request, http://localhost:9000/v1/stores/,GET,N/A 
+Response, {"timestamp":"2021-05-11T09:46:33.210+00:00","status":404,"error":"Not Found","message":"","path":"/"} 
+Request, http://localhost:9000/v1/stores/csrf,GET,N/A 
+Response, {"timestamp":"2021-05-11T09:46:33.341+00:00","status":404,"error":"Not Found","message":"","path":"/csrf"} 
+Request, http://localhost:9000/v1/stores/v2/api-docs,GET,N/A 
+Response, {"swagger":"2.0","info":{"description":"STORE-SERVICE API reference for developers","version":"1.0","title":"STORE-SERVICE","termsOfService":"http://abcd.com","contact":{"name":"user@gmail.com"},"license":{"name":"STORE-SERVICE License","url":"user@gmail.com"}},"host":"localhost:9000","basePath":"/v1/stores","tags":[{"name":"store-controller","description":"Store Controller"}],"paths":{"/stores/":{"post":{"tags":["store-controller"],"summary":"CreateStore","operationId":"CreateStoreUsingPOST","consumes":["application/json"],"produces":["*/*"],"parameters":[{"in":"body","name":"store","description":"store","required":true,"schema":{"$ref":"#/definitions/Store"}}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/Store"}},"201":{"description":"Created"},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"},"404":{"description":"Not Found"}},"deprecated":false}},"/stores/{id}":{"get":{"tags":["store-controller"],"summary":"getStoreById","operationId":"getStoreByIdUsingGET","produces":["*/*"],"parameters":[{"name":"id","in":"path","description":"id","required":true,"type":"integer","format":"int64"}],"responses":{"200":{"description":"OK","schema":{"$ref":"#/definitions/Optional«Store»"}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"},"404":{"description":"Not Found"}},"deprecated":false}}},"definitions":{"Optional«Store»":{"type":"object","properties":{"empty":{"type":"boolean"},"present":{"type":"boolean"}},"title":"Optional«Store»"},"Store":{"type":"object","properties":{"desc":{"type":"string"},"id":{"type":"integer","format":"int64"},"name":{"type":"string"}},"title":"Store"}}} 
+Request, http://localhost:9000/v1/stores/stores/,POST,{
+  "desc": "THis is store A",
+  "name": "Store A"
+} 
+Response, {"id":1,"name":"Store A","desc":"THis is store A"} 
+Request, http://localhost:9000/v1/stores/stores/1,GET,N/A 
+Response, {"id":1,"name":"Store A","desc":"THis is store A"} 
+Request, http://localhost:9000/v1/products/products/,POST,{
+  "desc": "Product destails",
+  "name": "Product 1",
+  "price": 100,
+  "storeId": 1
+} 
+Response, {"id":1,"name":"Product 1","desc":"Product destails","price":100.0,"storeId":1} 
+Request, http://localhost:9000/v1/products/products/1,GET,N/A 
+Response, {"product":{"id":1,"name":"Product 1","desc":"Product destails","price":100.0,"storeId":1},"store":{"id":1,"name":"Store A","desc":"THis is store A"}} 

@@ -1,0 +1,12 @@
+server:
+  port: 9003
+    
+spring:
+  application:
+    name: CONFIG-SERVICE
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ssmali1505/configfile
+          clone-on-start: true
