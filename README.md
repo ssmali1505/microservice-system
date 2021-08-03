@@ -19,7 +19,6 @@ It provides lots of plugins to develop and test Spring Boot Applications very ea
 It provides lots of plugins to work with embedded and in-memory Databases very easily.​
 
 ​
-
  
  What we are going to cover in demo : ​
 
