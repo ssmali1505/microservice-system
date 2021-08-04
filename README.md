@@ -14,7 +14,7 @@ It provides Embedded HTTP servers like Tomcat, Jetty etc. to develop and test ou
 
 It provides CLI (Command Line Interface) tool to develop and test Spring Boot Applications from command prompt very easily and quickly.​
 
-It provides lots of plugins to develop and test Spring Boot Applications very easily using Build Tools like Maven and Gradle​
+It provides lots of plugins to develop and test Spring Boot Applications very easily using Build Tools like Maven and Gradl.e​
 
 It provides lots of plugins to work with embedded and in-memory Databases very easily.​
 
